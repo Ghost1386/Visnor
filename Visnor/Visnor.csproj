@@ -17,6 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Visnor.Extensions\Visnor.Extensions.csproj" />
       <ProjectReference Include="..\Visnor.Mapper\Visnor.Mapper.csproj" />
       <ProjectReference Include="..\Visnor.Models\Visnor.Models.csproj" />
     </ItemGroup>

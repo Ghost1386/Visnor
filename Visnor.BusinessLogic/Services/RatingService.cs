@@ -1,6 +1,12 @@
-﻿namespace Visnor.BusinessLogic.Services;
+﻿using Visnor.BusinessLogic.Interfaces;
+using Visnor.Models.Models;
 
-public class RatingService
+namespace Visnor.BusinessLogic.Services;
+
+public class RatingService : IRatingService
 {
-    
+    public void CalculateRating(Film film)
+    {
+        throw new NotImplementedException();
+    }
 }

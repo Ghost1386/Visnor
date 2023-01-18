@@ -2,12 +2,14 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using AutoMapper;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Visnor.BusinessLogic.Interfaces;
 using Visnor.Common.DTO_S.AuthDto;
 using Visnor.Common.DTO_S.UserDto;
+using Visnor.Common.Enums;
+using Visnor.Models;
+using Visnor.Models.Models;
 using JwtRegisteredClaimNames = Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames;
 
 namespace Visnor.BusinessLogic.Services;
@@ -21,9 +23,10 @@ public class AuthService : IAuthService
 
     private readonly IHashService _hashService;
     private readonly IUserService _userService;
-    private readonly IMapper _mapper;
+    private readonly ApplicationContext _applicationContext;
 
-    public AuthService(IConfiguration configuration, IHashService hashService, IUserService userService, IMapper mapper)
+    public AuthService(IConfiguration configuration, IHashService hashService, IUserService userService, 
+        ApplicationContext applicationContext)
     {
         _jwtSubject = configuration["Jwt:Subject"];
         _jwtKey = configuration["Jwt:Key"];
@@ -32,7 +35,7 @@ public class AuthService : IAuthService
         
         _hashService = hashService;
         _userService = userService;
-        _mapper = mapper;
+        _applicationContext = applicationContext;
     }
     
     public string Login(LoginDto model)
@@ -75,6 +78,16 @@ public class AuthService : IAuthService
 
     public void Registration(RegistrationDto model)
     {
-        throw new NotImplementedException();
+        var hashPassword = _hashService.CreateHashPassword(model.Email, model.Password);
+
+        var user = new User
+        {
+            Email = model.Email,
+            Password = hashPassword,
+            Favorite = model.Favorite,
+            Role = (int)Role.User
+        };
+
+        _applicationContext.Users.Add(user);
     }
 }

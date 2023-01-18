@@ -11,6 +11,7 @@ public class ApplicationContext : DbContext
     }
 
     public DbSet<Auth> Auths { get; set; }
+    public DbSet<Ban> Bans { get; set; }
     public DbSet<Film> Films { get; set; }
     public DbSet<Rating> Ratings { get; set; }
     public DbSet<User> Users { get; set; }

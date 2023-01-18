@@ -9,9 +9,7 @@ public interface IUserService
     
     User GetUser(SearchUserDto model);
     
-    void CreateUser(CreateUserDto model);
+    string CreateUser(CreateUserDto model);
 
-    void EditUser(SearchUserDto model);
-    
-    void BannedUser(SearchUserDto model);
+    string BannedUser(string email, string reason);
 }

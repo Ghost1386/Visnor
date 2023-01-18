@@ -3,6 +3,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Visnor.Extensions;
 using Visnor.Mapper;
 using Visnor.Models;
 
@@ -35,6 +36,8 @@ builder.Services.AddAuthentication(options =>
 });
 
 builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
+
+builder.Services.AddIService();
 
 var mappingConfig = new MapperConfiguration(mc =>
 {

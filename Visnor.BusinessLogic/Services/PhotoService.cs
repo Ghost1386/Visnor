@@ -1,6 +1,12 @@
-﻿namespace Visnor.BusinessLogic.Services;
+﻿using Microsoft.AspNetCore.Http;
+using Visnor.BusinessLogic.Interfaces;
 
-public class PhotoService
+namespace Visnor.BusinessLogic.Services;
+
+public class PhotoService : IPhotoService
 {
-    
+    public string ConvertPhotoInByteString(IFormFile file)
+    {
+        throw new NotImplementedException();
+    }
 }
