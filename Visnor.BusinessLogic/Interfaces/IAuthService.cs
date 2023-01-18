@@ -4,7 +4,7 @@ namespace Visnor.BusinessLogic.Interfaces;
 
 public interface IAuthService
 {
-    void Login(LoginDto model);
+    string Login(LoginDto model);
 
     void Registration(RegistrationDto model);
 }

@@ -26,6 +26,16 @@
         "runtime": {
           "lib/netcoreapp2.0/_._": {}
         }
+      },
+      "Visnor.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Visnor.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Visnor.Common.dll": {}
+        }
       }
     }
   },
@@ -113,11 +123,17 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Visnor.Common/1.0.0": {
+      "type": "project",
+      "path": "../Visnor.Common/Visnor.Common.csproj",
+      "msbuildProject": "../Visnor.Common/Visnor.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "AutoMapper >= 12.0.1"
+      "AutoMapper >= 12.0.1",
+      "Visnor.Common >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -146,7 +162,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\egor5\\OneDrive\\Рабочий стол\\Visnor\\Visnor.Common\\Visnor.Common.csproj": {
+              "projectPath": "C:\\Users\\egor5\\OneDrive\\Рабочий стол\\Visnor\\Visnor.Common\\Visnor.Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

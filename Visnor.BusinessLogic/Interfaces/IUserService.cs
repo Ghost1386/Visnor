@@ -1,12 +1,13 @@
 ﻿using Visnor.Common.DTO_S.UserDto;
+using Visnor.Models.Models;
 
 namespace Visnor.BusinessLogic.Interfaces;
 
 public interface IUserService
 {
-    List<GetUserDto> GetAllUser();
+    List<User> GetAllUser();
     
-    GetUserDto GetUser(SearchUserDto model);
+    User GetUser(SearchUserDto model);
     
     void CreateUser(CreateUserDto model);
 

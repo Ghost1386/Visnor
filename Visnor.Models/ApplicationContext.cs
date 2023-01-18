@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Visnor.Models.Models;
 
 namespace Visnor.Models;
 
@@ -8,4 +9,10 @@ public class ApplicationContext : DbContext
     {
         Database.EnsureCreated();
     }
+
+    public DbSet<Auth> Auths { get; set; }
+    public DbSet<Film> Films { get; set; }
+    public DbSet<Rating> Ratings { get; set; }
+    public DbSet<User> Users { get; set; }
+    public DbSet<Viewing> Viewings { get; set; }
 }

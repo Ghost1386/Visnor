@@ -34,6 +34,8 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
+builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
+
 var mappingConfig = new MapperConfiguration(mc =>
 {
     mc.AddProfile(new MapperProfile());

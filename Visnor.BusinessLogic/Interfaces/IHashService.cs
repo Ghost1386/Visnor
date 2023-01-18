@@ -2,5 +2,7 @@
 
 public interface IHashService
 {
-    string HashPassword(string password);
+    string CreateHashPassword(string email, string password);
+    
+    string VerifyHashPassword(string email, string password);
 }
