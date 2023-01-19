@@ -1,20 +1,19 @@
 ﻿using Visnor.Common.DTO_S.FilmDto;
+using Visnor.Models.Models;
 
 namespace Visnor.BusinessLogic.Interfaces;
 
 public interface IFilmService
 {
-    List<GetFilmDto> GetAllFilm();
+    List<Film> GetAllFilm();
 
-    List<GetFilmDto> GetNewFilm();
+    List<Film> GetNewFilm();
 
-    List<GetFilmDto> GetRecommendedFilm();
+    List<Film> GetRecommendedFilm(int id);
 
-    List<GetFilmDto> GetViewedFilm();
+    List<Film> GetViewedFilm(int id);
 
-    GetFilmDto GetFilm(SearchFilmDto model);
+    Film GetFilm(SearchFilmDto model);
 
     void CreateFilm(CreateFilmDto model);
-
-    void EditFilm(SearchFilmDto model);
 }

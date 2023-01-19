@@ -4,9 +4,9 @@ namespace Visnor.BusinessLogic.Interfaces;
 
 public interface ISortService
 {
-    IQueryable<Film> GetNewFilm();
+    List<Film> GetNewFilm();
 
-    IQueryable<Film> GetRecommendedFilm();
+    List<Film> GetRecommendedFilm(int userId);
 
-    IQueryable<Film> GetViewedFilm();
+    List<Film> GetViewedFilm(int userId);
 }

@@ -13,15 +13,17 @@ public class RatingService : IRatingService
         _applicationContext = applicationContext;
     }
 
-    public void CreateRating(Film film)
+    public Rating CreateRating(int filmId)
     {
         var rating = new Rating
         {
             Value = 0.0,
-            FilmId = film.FilmId
+            FilmId = filmId
         };
 
         _applicationContext.Ratings.Add(rating);
+
+        return rating;
     }
 
     public void CalculateRating(int id, IQueryable<Viewing> viewing)

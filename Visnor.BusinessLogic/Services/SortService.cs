@@ -5,18 +5,50 @@ namespace Visnor.BusinessLogic.Services;
 
 public class SortService : ISortService
 {
-    public IQueryable<Film> GetNewFilm()
+    private readonly IFilmService _filmService;
+    private readonly IViewedService _viewedService;
+
+    public SortService(IFilmService filmService, IViewedService viewedService)
+    {
+        _filmService = filmService;
+        _viewedService = viewedService;
+    }
+
+    public List<Film> GetNewFilm()
+    {
+        var films = _filmService.GetAllFilm();
+
+        films.Reverse();
+        
+        var sortedFilms = films.Take(10).ToList();
+
+        return sortedFilms; 
+    }
+
+    public List<Film> GetRecommendedFilm(int userId)
     {
         throw new NotImplementedException();
     }
 
-    public IQueryable<Film> GetRecommendedFilm()
+    public List<Film> GetViewedFilm(int userId)
     {
-        throw new NotImplementedException();
-    }
+        var viewings = _viewedService.GetViewedFilmByUser(userId).AsQueryable();
 
-    public IQueryable<Film> GetViewedFilm()
-    {
-        throw new NotImplementedException();
+        var films = _filmService.GetAllFilm().AsQueryable();
+
+        var sortedFilms = new List<Film>();
+
+        foreach (var film in films)
+        {
+            foreach (var viewing in viewings)
+            {
+                if (viewing.FilmId == film.FilmId)
+                {
+                    sortedFilms.Add(film);
+                }
+            }
+        }
+
+        return sortedFilms;
     }
 }

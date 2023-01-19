@@ -4,7 +4,7 @@ namespace Visnor.BusinessLogic.Interfaces;
 
 public interface IRatingService
 {
-    void CreateRating(Film film);
+    Rating CreateRating(int filmId);
     
     void CalculateRating(int id, IQueryable<Viewing> viewing);
 }

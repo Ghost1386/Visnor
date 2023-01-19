@@ -1213,6 +1213,10 @@
       "Visnor.Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.2.0",
+          "Visnor.Models": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Visnor.Common.dll": {}
         },
