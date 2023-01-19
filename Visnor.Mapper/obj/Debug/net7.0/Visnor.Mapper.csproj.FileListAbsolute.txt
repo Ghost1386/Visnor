@@ -1,0 +1,15 @@
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Mapper\bin\Debug\net7.0\Visnor.Mapper.deps.json
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Mapper\bin\Debug\net7.0\Visnor.Mapper.dll
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Mapper\bin\Debug\net7.0\Visnor.Mapper.pdb
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Mapper\bin\Debug\net7.0\Visnor.Common.dll
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Mapper\bin\Debug\net7.0\Visnor.Common.pdb
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Mapper\obj\Debug\net7.0\Visnor.Mapper.csproj.AssemblyReference.cache
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Mapper\obj\Debug\net7.0\Visnor.Mapper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Mapper\obj\Debug\net7.0\Visnor.Mapper.AssemblyInfoInputs.cache
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Mapper\obj\Debug\net7.0\Visnor.Mapper.AssemblyInfo.cs
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Mapper\obj\Debug\net7.0\Visnor.Mapper.csproj.CoreCompileInputs.cache
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Mapper\obj\Debug\net7.0\Visnor.Mapper.csproj.CopyComplete
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Mapper\obj\Debug\net7.0\Visnor.Mapper.dll
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Mapper\obj\Debug\net7.0\refint\Visnor.Mapper.dll
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Mapper\obj\Debug\net7.0\Visnor.Mapper.pdb
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Mapper\obj\Debug\net7.0\ref\Visnor.Mapper.dll

@@ -7,6 +7,16 @@ public class PhotoService : IPhotoService
 {
     public string ConvertPhotoInByteString(IFormFile file)
     {
-        throw new NotImplementedException();
+        var photosInByteString = string.Empty;
+        
+        if (file.Length > 0)
+        {
+            using var ms = new MemoryStream();
+            file.CopyTo(ms);
+            var fileBytes = ms.ToArray();
+            photosInByteString = Convert.ToBase64String(fileBytes);
+        }
+        
+        return photosInByteString;
     }
 }

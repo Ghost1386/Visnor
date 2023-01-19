@@ -1,0 +1,17 @@
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.BusinessLogic\bin\Debug\net7.0\Visnor.BusinessLogic.deps.json
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.BusinessLogic\bin\Debug\net7.0\Visnor.BusinessLogic.dll
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.BusinessLogic\bin\Debug\net7.0\Visnor.BusinessLogic.pdb
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.BusinessLogic\bin\Debug\net7.0\Visnor.Common.dll
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.BusinessLogic\bin\Debug\net7.0\Visnor.Models.dll
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.BusinessLogic\bin\Debug\net7.0\Visnor.Common.pdb
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.BusinessLogic\bin\Debug\net7.0\Visnor.Models.pdb
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.BusinessLogic\obj\Debug\net7.0\Visnor.BusinessLogic.csproj.AssemblyReference.cache
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.BusinessLogic\obj\Debug\net7.0\Visnor.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.BusinessLogic\obj\Debug\net7.0\Visnor.BusinessLogic.AssemblyInfoInputs.cache
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.BusinessLogic\obj\Debug\net7.0\Visnor.BusinessLogic.AssemblyInfo.cs
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.BusinessLogic\obj\Debug\net7.0\Visnor.BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.BusinessLogic\obj\Debug\net7.0\Visnor.BusinessLogic.csproj.CopyComplete
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.BusinessLogic\obj\Debug\net7.0\Visnor.BusinessLogic.dll
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.BusinessLogic\obj\Debug\net7.0\refint\Visnor.BusinessLogic.dll
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.BusinessLogic\obj\Debug\net7.0\Visnor.BusinessLogic.pdb
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.BusinessLogic\obj\Debug\net7.0\ref\Visnor.BusinessLogic.dll
