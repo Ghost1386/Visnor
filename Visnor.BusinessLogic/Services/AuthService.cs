@@ -38,7 +38,7 @@ public class AuthService : IAuthService
         _applicationContext = applicationContext;
     }
     
-    public string Login(LoginDto model)
+    public AuthResponse Login(LoginDto model)
     {
         var hashPassword = _hashService.VerifyHashPassword(model.Email, model.Password);
 
@@ -70,24 +70,44 @@ public class AuthService : IAuthService
                 expires: DateTime.UtcNow.AddYears(1),
                 signingCredentials: signIn);
 
-            return new JwtSecurityTokenHandler().WriteToken(token);
+
+            var authResponse = new AuthResponse
+            {
+                UserId = user.Id,
+                Token = new JwtSecurityTokenHandler().WriteToken(token),
+                Email = user.Email,
+                Role = (Role)user.Role
+            };
+            
+            return authResponse;
         }
 
-        return string.Empty;
+        return new AuthResponse();
     }
 
-    public void Registration(RegistrationDto model)
+    public string Registration(RegistrationDto model)
     {
-        var hashPassword = _hashService.CreateHashPassword(model.Email, model.Password);
+        var users = _userService.GetAllUser().AsQueryable();
 
-        var user = new User
+        var userCheck = users.Where(u => u.Email == model.Email).ToList();
+
+        if (userCheck.Count == 0)
         {
-            Email = model.Email,
-            Password = hashPassword,
-            Favorite = model.Favorite,
-            Role = (int)Role.User
-        };
+            var hashPassword = _hashService.CreateHashPassword(model.Email, model.Password);
 
-        _applicationContext.Users.Add(user);
+            var user = new User
+            {
+                Email = model.Email,
+                Password = hashPassword,
+                Favorite = model.Favorite,
+                Role = (int)Role.User
+            };
+
+            _applicationContext.Users.Add(user);
+
+            return $"{DateTime.UtcNow}: Registration user with {user.Email} was successfully";
+        }
+        
+        return string.Empty;
     }
 }

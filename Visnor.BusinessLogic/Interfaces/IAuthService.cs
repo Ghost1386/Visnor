@@ -1,10 +1,11 @@
 ﻿using Visnor.Common.DTO_S.AuthDto;
+using Visnor.Models.Models;
 
 namespace Visnor.BusinessLogic.Interfaces;
 
 public interface IAuthService
 {
-    string Login(LoginDto model);
+    AuthResponse Login(LoginDto model);
 
-    void Registration(RegistrationDto model);
+    string Registration(RegistrationDto model);
 }
