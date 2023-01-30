@@ -10,11 +10,14 @@ namespace Visnor.BusinessLogic.Services;
 public class UserService : IUserService
 {
     private readonly ApplicationContext _applicationContext;
+    private readonly IPremiumService _premiumService;
     private readonly IMapper _mapper;
     
-    public UserService(ApplicationContext applicationContext, IMapper mapper)
+    public UserService(ApplicationContext applicationContext, IPremiumService premiumService, 
+        IMapper mapper)
     {
         _applicationContext = applicationContext;
+        _premiumService = premiumService;
         _mapper = mapper;
     }
     
@@ -41,6 +44,8 @@ public class UserService : IUserService
         var user = _mapper.Map<CreateUserDto, User>(model);
 
         _applicationContext.Users.Add(user);
+
+        _premiumService.CreatePremium(user.Id);
 
         return string.Empty;
     }

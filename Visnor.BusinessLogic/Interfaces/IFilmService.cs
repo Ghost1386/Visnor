@@ -13,7 +13,7 @@ public interface IFilmService
 
     List<Film> GetViewedFilm(int id);
 
-    Film GetFilm(SearchFilmDto model);
+    List<Film> GetFilm(SearchFilmDto model);
 
     void CreateFilm(CreateFilmDto model);
 }

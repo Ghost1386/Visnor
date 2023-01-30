@@ -49,6 +49,11 @@ public class AuthController : Controller
         }
     }
     
+    public IActionResult Registration()
+    {
+        return View();
+    }
+    
     [HttpPost]
     public IActionResult Registration(RegistrationDto registrationDto)
     {

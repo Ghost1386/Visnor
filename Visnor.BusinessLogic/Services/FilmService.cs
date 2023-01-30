@@ -40,12 +40,21 @@ public class FilmService : IFilmService
         return _sortService.GetViewedFilm(userId);
     }
 
-    public Film GetFilm(SearchFilmDto model)
+    public List<Film> GetFilm(SearchFilmDto model)
     {
-        var film = _applicationContext.Films.FirstOrDefault(f => f.Title == model.Title 
-                                                        && f.Year == model.Year);
+        var films = _applicationContext.Films.AsQueryable();
 
-        return film ?? new Film();
+        if (!string.IsNullOrEmpty(model.Title))
+        {
+            films = films.Where(f => f.Title == model.Title);
+        }
+        
+        if (model.Year != 0)
+        {
+            films = films.Where(f => f.Year == model.Year);
+        }
+
+        return films.ToList();
     }
 
     public void CreateFilm(CreateFilmDto model)
