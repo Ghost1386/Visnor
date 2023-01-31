@@ -27,7 +27,11 @@ public class FilmService : IFilmService
 
     public List<Film> GetNewFilm()
     {
-        return _sortService.GetNewFilm();
+        var films = GetAllFilm();
+
+        var sortedFilms = _sortService.GetNewFilm(films);
+        
+        return sortedFilms;
     }
 
     public List<Film> GetRecommendedFilm(int userId)
@@ -37,7 +41,11 @@ public class FilmService : IFilmService
 
     public List<Film> GetViewedFilm(int userId)
     {
-        return _sortService.GetViewedFilm(userId);
+        var films = GetAllFilm();
+
+        var sortedFilms = _sortService.GetViewedFilm(userId, films);
+        
+        return sortedFilms;
     }
 
     public List<Film> GetFilm(SearchFilmDto model)
@@ -79,5 +87,15 @@ public class FilmService : IFilmService
         };
 
         _applicationContext.Films.Add(film);
+    }
+
+    public void DeleteFilm(SearchFilmDto model)
+    {
+        var film = GetFilm(model).FirstOrDefault();
+
+        if (film != null)
+        {
+            _applicationContext.Films.Remove(film);
+        }
     }
 }

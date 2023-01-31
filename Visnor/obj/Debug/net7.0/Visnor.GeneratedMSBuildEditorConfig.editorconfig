@@ -31,3 +31,15 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/egor5/OneDrive/Рабочий стол/Visnor/Visnor/Views/Home/HomePage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/egor5/OneDrive/Рабочий стол/Visnor/Visnor/Views/Payments/Customer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudHNcQ3VzdG9tZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/egor5/OneDrive/Рабочий стол/Visnor/Visnor/Views/Payments/OkPayments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudHNcT2tQYXltZW50cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/egor5/OneDrive/Рабочий стол/Visnor/Visnor/Views/Payments/Payment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudHNcUGF5bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

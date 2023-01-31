@@ -5,19 +5,15 @@ namespace Visnor.BusinessLogic.Services;
 
 public class SortService : ISortService
 {
-    private readonly IFilmService _filmService;
     private readonly IViewedService _viewedService;
 
-    public SortService(IFilmService filmService, IViewedService viewedService)
+    public SortService(IViewedService viewedService)
     {
-        _filmService = filmService;
         _viewedService = viewedService;
     }
 
-    public List<Film> GetNewFilm()
+    public List<Film> GetNewFilm(List<Film> films)
     {
-        var films = _filmService.GetAllFilm();
-
         films.Reverse();
         
         var sortedFilms = films.Take(10).ToList();
@@ -30,11 +26,11 @@ public class SortService : ISortService
         throw new NotImplementedException();
     }
 
-    public List<Film> GetViewedFilm(int userId)
+    public List<Film> GetViewedFilm(int userId, List<Film> films)
     {
         var viewings = _viewedService.GetViewedFilmByUser(userId).AsQueryable();
 
-        var films = _filmService.GetAllFilm().AsQueryable();
+        films.AsQueryable();
 
         var sortedFilms = new List<Film>();
 

@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model List<Visnor.Models.Models.Film>;
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,25 +31,27 @@
             <img src="images/notification.png" alt="">
             <img src="images/user.png" alt="">
         </div>
-        
-        
     </nav>
 
 <div id="result">
     
 </div>
-        <div class="list_content">
-            <div class="vid_list">
-                <a href=""><img src="images/thumbnail1.png" alt="" class="thumbnail"></a>                             
-                <div class="flex-div">
-                    <img src="images/user.png" alt="">
-                    <div class="vid-info">
-                        <a href="">I'm Durgesh Soni Currently working as freelancing.</a>
-                        <p>Durgesh Soni</p>
-                        <p>15k Views &bull; 2 days</p>
-                    </div>
+
+<div class="list_content">
+    @foreach (var item in Model)
+    {
+        <div class="vid_list">
+            <a href=""><img src="data:image/png;base64,${item.Photo}" alt="" class="thumbnail"></a>
+            <div class="flex-div">
+                <img src="images/user.png" alt="">
+                <div class="vid-info">
+                    <a href="">@Html.DisplayFor(modelItem => item.Title, item.Year)</a>
+                    <p>@Html.DisplayFor(modelItem => item.Producer)</p>
+                    <p>@Html.DisplayFor(modelItem => item.Country)</p>
                 </div>
             </div>
         </div>
+    }
+    </div>
 </body>
 </html>

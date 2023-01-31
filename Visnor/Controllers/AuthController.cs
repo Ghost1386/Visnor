@@ -65,7 +65,7 @@ public class AuthController : Controller
             {
                 _logger.LogInformation(registrationResponse);
 
-                return Login();
+                return RedirectToAction(nameof(Login));
             }
 
             return _errorsController.ErrorsPage(401, $"User with this {registrationDto.Email} " +

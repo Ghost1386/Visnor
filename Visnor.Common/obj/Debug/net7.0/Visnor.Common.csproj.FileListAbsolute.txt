@@ -10,3 +10,6 @@ C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Common\obj\Debug\n
 C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Common\obj\Debug\net7.0\refint\Visnor.Common.dll
 C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Common\obj\Debug\net7.0\Visnor.Common.pdb
 C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Common\obj\Debug\net7.0\ref\Visnor.Common.dll
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Common\bin\Debug\net7.0\Visnor.Models.dll
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Common\bin\Debug\net7.0\Visnor.Models.pdb
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Common\obj\Debug\net7.0\Visnor.Common.csproj.CopyComplete

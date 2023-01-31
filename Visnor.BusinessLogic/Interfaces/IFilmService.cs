@@ -16,4 +16,6 @@ public interface IFilmService
     List<Film> GetFilm(SearchFilmDto model);
 
     void CreateFilm(CreateFilmDto model);
+
+    void DeleteFilm(SearchFilmDto model);
 }

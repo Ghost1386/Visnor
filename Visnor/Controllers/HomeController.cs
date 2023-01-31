@@ -1,18 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Visnor.BusinessLogic.Interfaces;
 
 namespace Visnor.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private readonly IFilmService _filmService;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(IFilmService filmService)
     {
-        _logger = logger;
+        _filmService = filmService;
     }
 
     public IActionResult HomePage()
     {
-        return View();
+        return View(_filmService.GetAllFilm());
     }
 }

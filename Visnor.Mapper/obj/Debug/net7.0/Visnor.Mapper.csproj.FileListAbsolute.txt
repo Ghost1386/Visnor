@@ -13,3 +13,5 @@ C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Mapper\obj\Debug\n
 C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Mapper\obj\Debug\net7.0\refint\Visnor.Mapper.dll
 C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Mapper\obj\Debug\net7.0\Visnor.Mapper.pdb
 C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Mapper\obj\Debug\net7.0\ref\Visnor.Mapper.dll
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Mapper\bin\Debug\net7.0\Visnor.Models.dll
+C:\Users\egor5\OneDrive\Рабочий стол\Visnor\Visnor.Mapper\bin\Debug\net7.0\Visnor.Models.pdb
