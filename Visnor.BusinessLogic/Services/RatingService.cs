@@ -26,20 +26,27 @@ public class RatingService : IRatingService
         return rating;
     }
 
-    public void CalculateRating(int id, IQueryable<Viewing> viewing)
+    public double GetRating(int filmId)
     {
-        var viewings = viewing.Where(g => g.FilmId == id).ToList();
+        var rating = _applicationContext.Ratings.FirstOrDefault(r => r.FilmId == filmId);
 
-        var sum = 0;
-
-        foreach (var grades in viewings)
+        if (rating != null)
         {
-            sum += grades.Grade;
+            return rating.Value;
         }
+
+        return 0;
+    }
+
+    public void CalculateRating(int filmId, IQueryable<Viewing> viewing)
+    {
+        var viewings = viewing.Where(g => g.FilmId == filmId).ToList();
+
+        var sum = viewings.Sum(v => v.Grade);
 
         var newGrade = sum / viewings.Count;
         
-        var rating = _applicationContext.Ratings.FirstOrDefault(r => r.FilmId == id);
+        var rating = _applicationContext.Ratings.FirstOrDefault(r => r.FilmId == filmId);
 
         if (rating != null)
         {

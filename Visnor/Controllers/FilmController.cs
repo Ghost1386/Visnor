@@ -18,7 +18,8 @@ public class FilmController : Controller
         _errorsController = errorsController;
         _filmService = filmService;
     }
-
+    
+    [HttpPost]
     public IActionResult GetFilms(int userId)
     {
         try
@@ -56,6 +57,7 @@ public class FilmController : Controller
         }
     }
 
+    [HttpGet]
     public IActionResult GetFilm(SearchFilmDto searchFilmDto)
     {
         try
